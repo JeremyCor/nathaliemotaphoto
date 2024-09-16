@@ -1,0 +1,166 @@
+/* CSS Personallié pour la popup contact */
+
+.hidden{
+    visibility: hidden; 
+    display: none !important;
+}
+
+.popup-overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.8);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    top:0;
+    left:0;
+    z-index: 999;
+}
+
+.popup-contact{
+    position:relative;
+    background:white;
+    max-width:600px;
+    width:80%;
+    padding:15px 0;
+    border: 5px solid #000000;
+}
+
+.popup-close{
+    /* position:absolute; */
+    height:110px;
+    width:100%;
+    cursor:pointer;
+    transition:all 0.4s ease;
+}
+
+.popup-title {
+    background-image: url('../img/contact.png');
+    background-repeat : repeat;
+    overflow : hidden;
+    margin-bottom: 10px;
+    width:100%;
+    height: 49px;
+}
+
+/* Position des 2 bannières pour le titre */
+.popup-title:first-child {
+    background-position-x: left -48%;
+}
+
+.popup-title:last-child {
+    background-position-x: left -33%;
+}
+
+.popup-informations {    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 5px 0 70px;
+    max-width: 265px;
+    margin: auto;
+}
+
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wpcf7-form p {
+    padding-top: 25px;
+    /* width: 90%; */
+}
+
+.wpcf7-form p label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.wpcf7-form p input {
+    height: 40px;
+    padding: 10px;
+}
+
+.wpcf7-form p textarea {
+    padding: 10px;
+}
+
+.wpcf7-form p .wpcf7-text,
+.wpcf7-form p .wpcf7-email,
+.wpcf7-form p textarea {
+    width: 100%;
+    border-radius: 0px;
+    border: 1px solid #000000;
+}
+
+.wpcf7-form p .wpcf7-text:focus,
+.wpcf7-form p .wpcf7-email:focus,
+.wpcf7-form p textarea:focus {    
+    border: 3px solid #000000;
+    background-color: rgba(175, 174, 174, 0.151);
+}
+
+wpcf7-form p {
+    text-align: center; /* Assurez-vous que le texte est centré dans les paragraphes du formulaire */
+    background-color: rgba(175, 174, 174, 0.151);
+}
+
+/* CSS pour styliser uniquement le bouton d'envoi dans le formulaire */
+
+.wpcf7-form p .wpcf7-submit {
+    font-family: 'Space Mono', monospace;
+    display: block; /* Affiche le bouton en tant que bloc pour occuper toute la largeur disponible */
+    width: calc(100% - 40px); /* Calcul de la largeur moins les marges (20px de chaque côté) */
+    margin: 20px auto; /* Centre le bouton horizontalement avec une marge autour */
+    padding: 10px; /* Ajoute du padding pour l'espace intérieur du bouton */
+    background-color: rgba(175, 174, 174, 0.151); /* Couleur de fond grise par défaut */
+    color: #000; /* Couleur du texte */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Effet de transition sur le hover */
+    font-size: 14px;
+    font-weight: 400;
+    box-sizing: border-box; /* Inclut les bordures et le padding dans le calcul de la largeur */
+}
+
+.wpcf7-form p .wpcf7-submit:hover {
+    background-color: #000000; /* Couleur de fond plus foncée au survol */
+    color: #fff; /* Couleur du texte en blanc au survol */
+}
+
+
+.wpcf7-response-output {
+    width: 160%;
+    transform: translate(-20%,0%);
+    color: red;
+}
+
+
+/*  **********************************  */
+/*    Media query : max-width: 780px    */
+/*  **********************************  */
+@media all and (max-width: 780px) {
+    .popup-informations {    
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding: 5px 45px 5px;
+    }
+
+    .popup-close {
+        height: 60px;
+    }
+
+    .popup-title {        
+        background-image: url('../img/contact-mini.png');
+        height: 22px;
+    }
+
+    .wpcf7-response-output {
+        width: 100%;        
+        transform: translate(0%,0%);
+    }
+}

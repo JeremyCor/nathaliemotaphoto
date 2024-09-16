@@ -513,9 +513,7 @@ form {
     pointer-events: none;
 }
 
-.option-filter option:hover::after {
-    background-color: #c10000; /* Couleur de survol */
-}
+
 
 .option-filter option[disabled][hidden] {
     display: none;
@@ -1005,3 +1003,4 @@ form {
     }
 }
 
+/* test */
